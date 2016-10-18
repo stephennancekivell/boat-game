@@ -36,25 +36,21 @@ object GameState {
   }
 
   private def drawHitsGrid(grid:TargetGrid): Unit =
-    grid.foreach { cols =>
-      println(cols.map(draw).mkString(""))
-    }
+    drawWithBoarder(grid.map(_.map(draw).mkString))
 
   def drawShips(grid:ShipsGrid): Seq[String] =
     grid.map(_.map(draw).mkString)
 
-  def drawShipsGrid(grid:ShipsGrid): Unit = {
-    val indexHeader = "   "+grid.head.indices.mkString
-    val headerBar = "   "+grid.head.indices.map(_ => "_").mkString
-    val drawnGrid = drawShips(grid)
-    val indexedWorld = drawnGrid.zipWithIndex.map { case (world, idx) =>
-        s"$idx |$world"
-    }
+  def drawShipsGrid(grid:ShipsGrid): Unit =
+    drawWithBoarder(drawShips(grid))
 
-    (Seq(indexHeader, headerBar) ++ indexedWorld).foreach(println)
+  def drawWithBoarder(lines: Seq[String]): Unit = {
+    val indexHeader = "   "+lines.head.indices.mkString
+    val headerBar = "   "+lines.head.indices.map(_ => "_").mkString
+    val indexedLines = lines.zipWithIndex.map { case (line, idx) => idx + " |"+line }
+
+    (Seq(indexHeader, headerBar) ++ indexedLines).foreach(println)
   }
-
-
 }
 
 case class GameState(

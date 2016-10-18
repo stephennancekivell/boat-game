@@ -26,7 +26,7 @@ object CommandProcessor {
         }
 
       case false =>
-        if (isHit(prevState.playerB.ownLocations, command)) {
+        if (isHit(prevState.playerA.ownLocations, command)) {
           setHit(command, false, prevState)
         } else {
           prevState

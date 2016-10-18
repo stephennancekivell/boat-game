@@ -38,7 +38,7 @@ object Game {
       println("Player A Won (ง'̀-'́)ง")
     } else {
       val command = Input.readCommand("player B")
-      val gameAfterB = CommandProcessor.process(prevState, command, false)
+      val gameAfterB = CommandProcessor.process(gameAfterA, command, false)
       GameState.draw(gameAfterB)
       if (GameState.hasPlayerLost(gameAfterB.playerA.ownLocations)) {
         println("Player B Won (ง'̀-'́)ง")

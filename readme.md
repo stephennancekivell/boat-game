@@ -17,6 +17,10 @@ Due to time constraints the following has been left as next steps
 * Manual input world builder.
 * input should be from 1-10 a-j instead of 0-9 0-9
 
+Usage
+---------
+sbt run
+
 
 Display
 ----------

@@ -20,57 +20,68 @@ Due to time constraints the following has been left as next steps
 
 Display
 ----------
+
+```
 S ship
 H hit ship
 M miss
+```
+
+```
 
 Player A - Own Ships
    0123456789
    __________
-0 |     SSHH 
+0 |          
 1 |          
-2 |         S
-3 |         H
-4 |      H   
-5 |          
-6 |          
-7 |   HHH    
-8 |  HHHHH   
+2 |          
+3 |         S
+4 |          
+5 |  SHSSS   
+6 |       SSS
+7 |   SSSS   
+8 |     SS   
 9 |          
 Player A - Targets
-          
-          
-      HH  
-  HHHH    
-          
-          
-          
-          
-      MMH 
-   HHHHMH 
+   0123456789
+   __________
+0 |          
+1 |          
+2 |      H   
+3 |          
+4 |          
+5 |   M      
+6 |          
+7 |          
+8 |          
+9 |          
 Player B - Own Ships
    0123456789
    __________
 0 |          
 1 |          
-2 |      HH  
-3 |  HHHH    
-4 |          
-5 |          
-6 |        S 
-7 |        S 
-8 |        H 
-9 |   HHHHHH 
+2 |      H S 
+3 |   SSSS   
+4 |      S   
+5 |      S SS
+6 |      S   
+7 |          
+8 |SSSS      
+9 |          
 Player B - Targets
-       HH 
-          
-          
-        MH
-     MHM  
-          
-          
-   HHH    
-  HHHMHM  
-          
-player A enter a location to attack
-7,8
+   0123456789
+   __________
+0 |          
+1 |          
+2 |          
+3 |          
+4 |          
+5 |   H      
+6 |          
+7 |          
+8 |          
+9 |          
+player B enter a location to attack
+
+7,7
+```
